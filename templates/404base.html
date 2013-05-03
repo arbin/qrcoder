@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+{% spaceless %}
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html dir="ltr" lang="en-US"><!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>FREE QR Code Generator For Smartphones</title>
+	<meta name="description" content="FREE QR Code Generator For Smartphones" />
+
+	<!-- Google Web Fonts
+  ================================================== -->
+	<link href='http://fonts.googleapis.com/css?family=Lobster+Two:700|Bree+Serif|Muli' rel='stylesheet' type='text/css'>
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS Stylesheets
+  ================================================== -->
+	<link rel="stylesheet" href="{{ MEDIA_URL }}assets/css/resets.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}assets/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}assets/css/media-queries.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}assets/css/prettyPhoto.css" type="text/css" media="screen"/> <!-- Image Gallery -->
+	
+	<!--[if lt IE 9]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<script src="assets/js/selectivizr.min.js"></script>
+	<![endif]-->
+
+	<!-- Javascript
+  ================================================== -->
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+	<!-- <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+	<!-- <script src="assets/js/supersized.js"></script> -->
+	<script src="{{ MEDIA_URL }}assets/js/tweet.js"></script>
+	<!-- <script src="assets/js/countdown.min.js"></script> -->
+	<script src="{{ MEDIA_URL }}assets/js/prettyphoto.js"></script>
+	<script src="{{ MEDIA_URL }}assets/js/tabs.js"></script>
+	<script type= "text/javascript" src = "{{ MEDIA_URL }}/assets/js/countries.js"></script>
+	
+	<style>
+
+		#head  {
+			/*background-color:#a5dc4f;*/
+			background-color:#fff;
+			background-image:-webkit-linear-gradient(top,#fff 0,#7db535 100%);
+			background-image:-moz-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:-ms-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:-o-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:linear-gradient(top,#a5dc4f 0,#7db535 100%);
+		}
+
+		::-moz-selection{background:#a5dc4f;color:#fff;text-shadow:none}
+		::selection{background:#a5dc4f;color:#fff;text-shadow:none}
+
+		.logotext.square:hover h1,
+		.logotext.oval:hover h1 {
+			background:#a5dc4f;
+		}
+
+		#progress-bar {background:#a5dc4f}
+
+		.contact button,
+		#head .newsletter button,
+		.calltoaction a {
+			background-color:#a5dc4f;
+			background-image:-webkit-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:-moz-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:-ms-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:-o-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			border-bottom:2px solid #609123;
+		}
+
+		.contact button:hover,
+		#head .newsletter button:hover,
+		.calltoaction a:hover {
+			background:#a5dc4f !important;
+		}
+
+		.contact button:active,
+		#head .newsletter button:active,
+		.calltoaction a:active {
+			background:#a5dc4f !important;
+			border-bottom-color:#7db535;
+		}
+
+		.hexagon {background:#a5dc4f;}
+		.hexagon:before {border-bottom-color: #a5dc4f}
+		.hexagon:after {border-top-color: #a5dc4f}
+
+		#pricing-table .popular h3 {
+			background-color:#a5dc4f;
+			background-image:-webkit-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:-moz-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:-ms-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:-o-linear-gradient(top,#a5dc4f 0,#7db535 100%);
+			background-image:linear-gradient(top,#a5dc4f 0,#7db535 100%);
+		}
+
+		.social li a { background:#a5dc4f }
+
+		.testimonals aside a:hover,
+		.tweet_time a:hover,
+		.tweet_text a,
+		.copyright a:hover {
+			color:#7db535;
+		}
+
+
+	</style>
+	<style>
+    .blockbkg {
+      background-color: gray;
+      opacity: 90%;
+      filter:alpha(opacity=90);
+      background-color: rgba(0,0,0,0.90);
+      width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+      float: absolute;
+      position: fixed;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+    .cont {
+      background-color: white;
+      color: gray;
+      font-size: 16px;
+      border: 1px solid gray;
+      padding: 20px;
+      display:block;
+      position: absolute;
+      top: 10%;
+      left: 35%;
+      width: 400px;
+      height: 200px;
+      overflow-y: scroll;
+    }
+    .closebtn {
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      margin: 2px;
+      float: right;
+      top: 0;
+      background-image: url({{ MEDIA_URL }}assets/img/x.png);
+      background-repeat: no-repeat;
+      background-position:center;
+      /*background-color: lightgray;*/
+      display: block;
+    }
+    .closebtn:hover {
+      cursor: pointer;
+    }
+    .normal {
+      background-color: lightblue;
+      width: 900px;
+      min-height: 200px;
+      padding: 20px;
+    }
+  </style>
+	<script src="{{ MEDIA_URL }}assets/js/jquery.min.js" type="text/javascript"></script>
+	<script>
+    $(document).ready(function () {
+      $("#closebtn").click(function () {
+        $("#dlg").hide('800', "swing", function () { $("#bkg").fadeOut("500"); });
+      });
+      $("#opn").click(function () {
+        if (document.getElementById('bkg').style.visibility == 'hidden') {
+          document.getElementById('bkg').style.visibility = '';
+          $("#bkg").hide();
+        }
+        if (document.getElementById('dlg').style.visibility == 'hidden') {
+          document.getElementById('dlg').style.visibility = '';
+          $("#dlg").hide();
+        }
+        $("#bkg").fadeIn(500, "linear", function () { $("#dlg").show(800, "swing"); });
+      });    
+
+    });
+  </script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	<header id="head">
+
+		<div class="inner">
+			<a href="/" class="logotext oval"><h1>QRCoder</h1></a><p class="medium">FREE QR Code Generator, No Need to Sign-In</p>
+			<div class="details left">	
+				<div class="message">
+					<!-- Static text -->
+					
+					<!-- Fading text. See core.js for list of words. -->
+					<!--<p class="large">Take them to your <span id="words"></span></p> -->
+				</div>
+			</div>
+			<div class="menu right">
+				<div id="menuContainer">
+					<div class="menus">
+						
+					</div>
+				</div>
+			</div>
+						
+						{% block yield %}{% endblock %}
+
+					
+				<ul class="social">
+					<li class="twitter"><a href="http://twitter.com/pysoldev">Twitter</a></li>
+					<li class="facebook"><a href="http://www.facebook.com/pysoldev">Facebook</a></li>
+					<li class="vimeo"><a href="http://vimeo.com/user3665971">Vimeo</a></li>
+					<li class="linkedin"><a href="http://www.linkedin.com/company/1217355">Linkedin</a></li>
+				</ul>
+
+				<div class="tweet"></div>
+
+				<div class="copyright">
+					&copy; 2013 Pysoldev LLC. All Rights Reserved. A <a href="http://djangoproject.org">Django</a> App. Created by <a href="http://arbin.pysoldev.com">Arbin Bulaybulay</a>. This website is also best viewed with Smartphones and tablets. "QR Code" is a registered trademark of DENSO WAVE INCORPORATED.
+				</div>
+
+		</div>
+	</section>
+	
+	<script src="{{ MEDIA_URL }}assets/js/core-qr.js?asdasdasd"></script>
+	<!--<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>-->
+		
+</body>
+</html>
+{% endspaceless %}

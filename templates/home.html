@@ -1,0 +1,260 @@
+{% extends "base.html" %}
+{% block yield %}
+			<div class="details right">
+			<!--<img src="{{ MEDIA_URL }}assets/img/smartphone_qr.png" />-->
+				<div class="message">				
+					<p class="medium">QR Code (abbreviated from Quick Response Code) <p> <p class="small">is a Smartphone readable bar code commonly use in consumer advertising that can store website URL's, plain text, phone numbers, email addresses and more. </p>
+					<p>Total QR Code Created On This Site is {{ totalqr }}</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<section class="body">
+		<div class="inner">
+				<div id="extra">
+					<div class="block">
+						<h2 class="heading"><span class="left"><strong>QR Code Generator</strong></span></h2>						
+						<div id="tabContainer">
+							<div class="tabs">
+							  <ul>
+								<li id="tabHeader_1">Website URL</li>
+								<li id="tabHeader_2">Twitter</li>
+								<li id="tabHeader_3">Skype</li>
+								<li id="tabHeader_4">Facebook</li>
+								<li id="tabHeader_5">Plain Text</li>
+								<li id="tabHeader_6">vCard</li>
+								<li id="tabHeader_7">Telephone Number</li>
+							  </ul>
+							</div>
+							<div class="tabscontent">
+							  <div class="tabpage" id="tabpage_1">
+									<center>
+									<div class="clear"></div>
+									<p class="small"> Enter Website URL </p>
+									<form class="contact" id="qrcode" action="{% url home %}" method="post"> {% csrf_token %}							
+										<div class="form">											
+											<input type="text" name="url" placeholder="http://" id="url" />
+											<button>Generate</button>	
+										</div>			
+									</form>
+									</center>
+																
+							  </div>
+							  <div class="tabpage" id="tabpage_2">
+								<center>
+									<form class="contact" id="qrcode" action="{% url home%}" method="post"> {% csrf_token %}							
+									<div class="form">
+										<p class="small">Twitter Profile </p>
+										<div class="clear"></div>
+										<input type="text" name="twitter" placeholder="Username" id="twitter" />
+										<button>Generate</button>
+									</div>
+									</form>
+								</center>
+									
+							  </div>
+							  <div class="tabpage" id="tabpage_3">
+								<center>
+									<form class="contact" id="qrcode" action="{% url home %}" method="post"> {% csrf_token %}							
+									<div class="form">
+										<p class="small">Input Skype Username </p>
+										<div class="clear"></div>
+										<input type="text" name="skypename" placeholder="Skype Username" id="skype" />
+										<button>Generate</button>
+									</div>
+									</form>
+								</center>						
+							  </div>
+							  <div class="tabpage" id="tabpage_4">
+									<center>
+									
+									<form class="contact" id="qrcode" action="{% url home %}" method="post"> {% csrf_token %}							
+									<div class="form">
+										<p class="small"> Link to Facebook Page </p>
+										<div class="clear"></div>
+										<input type="text" name="fbpage" placeholder="Facebook Page" id="url" />
+										<button>Generate</button>
+									</div>
+									</form>
+									<br />
+									
+									<form class="contact" id="qrcode" action="{% url home %}" method="post"> {% csrf_token %}							
+									<div class="form">
+										<p class="small"> Create a Facebook Like </p>
+										<div class="clear"></div>
+										<input type="text" name="fburlpage" placeholder="URL of page to be liked" id="url" />
+										<input type="text" name="fbtitle" placeholder="Page title" id="url" />
+										<button>Generate</button>
+									</div>
+									</form>
+									</center>									
+							  </div>
+							  <div class="tabpage" id="tabpage_5">
+								<center>
+								<div class="clear"></div>
+								<form class="contact" id="qrcode" action="{% url home %}" method="post"> {% csrf_token %}							
+									<div class="form">
+										<textarea name="message" placeholder="Plain Text Here" id="contactmessage"></textarea>
+										<button>Generate</button>
+									</div>
+								</form>
+								</center>	
+							  </div>
+							  <div class="tabpage" id="tabpage_6">
+							  <div class="clear"></div>
+							  <p class="small"><strong>vCard</strong> is a file format standard for electronic business cards. Enter details below.</p>
+								<form class="contact" id="qrcode" action="{% url home %}" method="post"> {% csrf_token %}								<input type="hidden" name="vcard"  value="" placeholder="vcard" id="url" />								
+									<center>
+									<div class="clear"></div>
+									<div class="form">
+										<input type="text" name="firstname" placeholder="Firstname" id="contactname" />
+										<input type="text" name="lastname" placeholder="Lastname" id="contactname" />
+										<input type="text" name="jobtitle" placeholder="Job Title" id="contactname" />
+										<input type="text" name="telno" placeholder="Telephone Number" id="contactname" />
+										<input type="text" name="celno" placeholder="Cell Number" id="contactname" />
+										<input type="text" name="email" placeholder="Email Address" id="contactname" />
+										<input type="text" name="website" placeholder="Website" id="contactname" />
+										<input type="text" name="org" placeholder="Organization" id="contactname" />
+										<input type="text" name="streetad" placeholder="Street Address" id="contactname" />
+										<input type="text" name="city" placeholder="City" id="contactname" />
+										<select onchange="print_state('state',this.selectedIndex);" id="country" name ="country"></select>
+										<select name ="state" id ="state"></select>
+										<script language="javascript">print_country("country");</script>
+										<input type="text" name="zip" placeholder="Zip/Postcode" id="contactname" />
+										<button>Generate</button>
+									</div>
+									</center>
+								</form>
+								
+							  </div>
+							  <div class="tabpage" id="tabpage_7">
+								<center>
+								<div class="clear"></div>
+								<p class="small"> Enter Telephone Number </p>
+									<form class="contact" id="qrcode" action="{% url home %}" method="post"> {% csrf_token %}							
+										<div class="form">
+											<input type="text" name="telno" placeholder="Telephone Number" id="telno" />
+											<button>Generate</button>
+										</div>
+									</form>
+								</center>																									
+							  </div>
+							</div>
+							<p class="small">Enter the needed information in fields given above and press "Generate". That's it! Once you have generated your QR code you can save it, print it, email it, share it with your friends on social media or make fun things like t-shirts, mugs and many more.</p>
+						</div>
+					
+					    <div id="outputContainer">
+						<span class="center"><p class="small">Two versions of QR Code to share and download</p></span>
+						<div class="qrcode">
+							<center>
+							<ul class="qroutput">											
+								<li><img src="{{ MEDIA_URL }}assets/img/qrcode/{{ qroutput1 }}" title="Version 1"></li>
+								<li><img src="{{ MEDIA_URL }}assets/img/qrcode/{{ qroutput40 }}" title="Version 40"></li>
+								
+							</ul>
+							</center>						
+						</div>
+						<center>Version 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Version 40 <br /><br />
+							  <p class="small">Note: Some scanner is not compatible with version 40 </p> </center> <br />
+							  
+							  <h2 class="heading"><span class="center"><p class="small">Please share if you find it useful.</p></span></h2>
+								<center>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone></g:plusone>
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	po.src = 'https://apis.google.com/js/plusone.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+									<div class="fb-like" data-href="http://qrcoder.pysoldev.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+									
+									<!-- <a data-pin-config="above" href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fqrcoder.pysoldev.com&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a> -->									
+									<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://qrcoder.pysoldev.com" data-via="pysoldev" data-related="arbinbulaybulay" data-hashtags="qrcoder">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+								<p class="small">Output Type Here </p><br />						
+								<ul class="gallery">								
+								<li><a href="{{ MEDIA_URL }}assets/img/qrcode/pdf/{{ pdfprint }}" ><img src="{{ MEDIA_URL }}assets/img/scan/button-print.png" title="Print to PDF" /></a></li>
+								<li><a href="#" id="opn"><img src="{{ MEDIA_URL }}assets/img/scan/button-email.png" title="Email" /></a>
+									<div class="blockbkg" id="bkg" style="visibility: hidden;"><div class="cont" id="dlg" style="visibility: hidden;">
+									<div class="closebtn" title="Close" id="closebtn"></div>
+									<h1>Send Email</h1>
+										<form class="contact" id="qremail" action="{% url home %}" method="post"> {% csrf_token %}										<input type="hidden" name="qrzip"  value="{{ download }}" placeholder="Upload image here" id="url" />
+											<div class="form">											
+												<input type="text" name="email" placeholder="Enter email here" id="email" />
+												<button>Send</button>											
+											</div>			
+										</form>	
+									</div>
+									</div>
+								</li>
+								<li><a href="{{ MEDIA_URL }}assets/img/qrcode/zip/{{ download }}" /><img src="{{ MEDIA_URL }}assets/img/scan/button-download.png" title="Download" /></a></li>
+								
+	
+								</ul>
+								
+								</center>
+						</div>
+						
+					</div>
+					<div class="clear"> </div>
+					<div class="block">						
+						<p class="large">Want to add QR code to your picture, business card, invitation card, images or logo?</p>					
+						<form class="contact" id="qrcode" method="post" action="{% url uploads %}" enctype="multipart/form-data">	{% csrf_token %}						
+							<div class="form">
+								<div id="pricing-table" class="clear">								
+									<div class="list qrcode">
+									    <p class="small">Note: Please create your QR code first above before proceeding here.</p>
+										<div class="clear"> </div>
+										<p class="small">Upload an image or logo here</p>
+                                        <div class="clear"> </div><div class="clear"></div>										
+										<input type="file" name="background" placeholder="Upload image here" id="url" />
+										<input type="hidden" name="qrcode1"  value="{{ qroutput1 }}" placeholder="Upload image here" id="url" />
+										<input type="hidden" name="qrcode40"  value="{{ qroutput40 }}" placeholder="Upload image here" id="url" />
+									<!--	<p class="small">Upload QR code here</p>
+										<input type="file" name="foreground" placeholder="Upload QR code here" id="url" />	-->								</div>
+								</div>
+								
+								<h2 class="heading"><span class="center"><p class="small">Select QR code position</p></span></h2>
+								<ul>
+									<li><input type="radio" name="position" value="upper-left">Upper left</li>
+									<li><input type="radio" name="position" value="upper-right">Upper right</li>
+									<li><input type="radio" name="position" value="center">Center</li>
+									<li><input type="radio" name="position" value="bottom-left">Bottom left</li>
+									<li><input type="radio" name="position" value="bottom-right">Bottom right</li>
+								</ul>
+								
+								<h2 class="heading"><span class="center"><p class="small">Select QR version</p></span></h2>
+								<ul>
+									<li><input type="radio" name="version" value="version1">Version 1</li>
+									<li><input type="radio" name="version" value="version40">Version 40</li>
+								</ul>
+									
+							</div>
+							<img src="{{ MEDIA_URL }}assets/img/merge/{{ qrmerge }}">
+							<button>Generate</button>
+							
+						</form>
+						Note: This will resize your image to height=200px and width=400px.
+					</div>
+					
+					<div class="block">
+						<h2 class="heading"><span class="center"><strong>Smartphone Apps to Scan QR Codes</strong></span></h2>
+						<center>
+						<ul class="gallery">
+							<li><a href="http://itunes.apple.com/us/app/scan/id411206394" rel="prettyPhoto[gallery]"><img src="{{ MEDIA_URL }}assets/img/scan/scan_iphone.png" /></a></li>
+							<li><a href="https://play.google.com/store/apps/details?id=me.scan.android.client" rel="prettyPhoto[gallery]"><img src="{{ MEDIA_URL }}assets/img/scan/scan-android.png" /></a></li>
+							<li><a href="http://www.windowsphone.com/en-US/apps/c62d7a1c-c336-4394-84d0-2ea4913fc891" rel="prettyPhoto[gallery]"><img src="{{ MEDIA_URL }}assets/img/scan/scan-windows.png" /></a></li>
+							<li><a href="http://itunes.apple.com/us/app/zapper-scanner/id505847168?mt=8" rel="prettyPhoto[gallery]"><img src="{{ MEDIA_URL }}assets/img/scan/scan-zapper.png" /></a></li>
+							<li><a href="https://play.google.com/store/apps/details?id=com.etisbew.qrcr.android" rel="prettyPhoto[gallery]"><img src="{{ MEDIA_URL }}assets/img/scan/button-qrcr.jpg" /></a></li>
+							
+						</ul>
+						</center>
+					</div>							
+				</div>
+  
+{% endblock %}

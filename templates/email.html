@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block yield %}
+			<div class="details right">
+
+				<div class="message">
+					<p class="medium">Send through email <p>
+					<img src="{{ MEDIA_URL }}assets/img/pysoldev.com.png">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="body">
+
+		<div class="inner">
+
+				<div id="extra">
+					<div class="block">
+											
+						<div id="tabContainer">
+							<div class="tabs">
+							  <ul>
+								<li id="tabHeader_1">Send through email</li>
+							  </ul>
+							</div>
+							<div class="tabscontent">
+							  <div class="tabpage" id="tabpage_1">							  									
+									<p class="small">  </p>
+									<form class="contact" id="qrcode" action="{% url home %}" method="post"> {% csrf_token %}							
+										<div class="form">											
+											<input type="text" name="email" placeholder="Enter email here" id="email" />
+											<button>Send</button>											
+										</div>			
+									</form>																									
+							  </div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+				
+{% endblock %}

@@ -1,0 +1,133 @@
+/************************************************************************************
+smaller than 980px
+*************************************************************************************/
+@media screen and (max-width: 1050px) {
+
+	#head #countdown {font-size:170px}
+
+	.inner { width: 90% }
+
+}
+
+/************************************************************************************
+smaller than 900
+*************************************************************************************/
+@media screen and (max-width: 900px) {
+
+	#head #countdown {padding:40px;font-size:150px}
+
+	.features li {
+		width:50%;
+		padding-left:0;
+	}
+
+
+	#head .details.right {position:static;margin:10px 0 0 0}
+
+
+	.team li .social {
+		margin-left:0px;
+	}
+
+	.team > li {
+		width:100%;
+		text-align:left;
+		padding:0;
+	}
+	.team li img {
+		display:inline-block;
+		margin:0 10px 10px 0;
+		float:left;
+		height:auto;
+		width:25%;
+	}
+
+
+	.testimonals li {
+		display:block;
+		width:100%;
+		padding:10px 0 !important;
+	}
+
+	.testimonals li:nth-of-type(2) {
+		padding-left:0;
+		padding-right:0;
+	}
+
+}
+
+/************************************************************************************
+smaller than 700px
+*************************************************************************************/
+@media screen and (max-width: 765px) {
+
+	#head #countdown {padding:20px}
+
+	#head .details {width:100%}
+
+	#head .newsletter .email {width:100%}
+	#head .newsletter button {left:-3px}
+
+	.contact .form {width:100%;display:block}
+	.contact li {padding:0}
+	.contact ul {padding-left:0;width:100%;padding-top:30px}
+	.contact li span {width:50px;text-align:left}
+	.contact .map {padding:0 0 25px 0}
+	.contact .address  {float:none;margin:0}
+
+	.tweet {float:none;width:100%;}
+	.inner .social {height:90px;}
+
+}
+
+/************************************************************************************
+smaller than 580px
+*************************************************************************************/
+@media screen and (max-width: 580px) {
+
+	#head #countdown {padding:10px;font-size:100px}
+
+	.inner {padding:20px 10px !important}
+
+	.logotext.transparent h1 {margin-top:35px;font-size:40px}
+	.logotext.square h1 {padding:30px;font-size:40px}
+	.logotext.oval h1 {margin-top:30px;font-size:40px;padding:20px;line-height:70px}
+
+	#head .message p.large #words {display:block;margin:0}
+	#head .message p.large #words strong {display:none}
+	#head .message p.large #words strong.active {display:block !important}
+
+	#head .message p.large {font-size:24px;line-height:26px;padding-bottom:20px;}
+	#head .message p.medium {font-size:18px;line-height:20px}
+	#head .message p.small {font-size:14px;line-height:18px}
+
+	#extra h2.heading {background:transparent}
+	#extra h2 strong {box-shadow:none;background:transparent}
+	#extra h2.heading span.left,
+	#extra h2.heading span.right,
+	#extra h2.heading span.center {text-align:left}
+
+	.features li {width:100%}
+
+	.team li .social {display:none}
+
+	#pricing-table .plan {display:block;width:100%;margin-bottom:15px}
+	#pricing-table .plan.popular {margin: 15px 0 5px 0}
+
+	#pricing-table .plan:last-child {margin-bottom:-10px}
+
+}
+
+/************************************************************************************
+smaller than 320px
+*************************************************************************************/
+@media screen and (max-width: 319px) {
+
+	.features li .hexagon {display:none}
+	.features li p {margin-left:0}
+
+	.team li {padding-bottom:10px}
+	.team li:last-child {padding-bottom:0}
+	.team li img {display:none}
+
+}

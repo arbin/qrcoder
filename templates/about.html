@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block yield %}
+			<div class="details right">
+				<div class="message">
+					<p class="medium">QR Code Encoding Description</p>
+					<img src="{{ MEDIA_URL }}assets/img/qrcode.png">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="body">
+
+		<div class="inner">
+
+				<div id="extra">
+					<div class="block">
+
+						<h2 class="heading"><span class="center"><strong>What is QR Code?</strong></span></h2>						 
+						<p class="small">A QR code is a specific matrix barcode, readable by dedicated QR barcode readers and Smartphones. The code consists of black modules arranged in a square pattern on a white background. The information encoded can be URL, text, vCard and other data types. QR Code will take your visitors, customers or friends to whatever information or website. For more information please visit <a href="http://en.wikipedia.org/wiki/QR_code">QR Code</a> </p>
+						
+					</div>
+
+					<div class="block">
+						<h2 class="heading"><span class="center"><strong>About Us</strong></span></h2>
+						
+						<p class="small">QRCoder is built with Python and Django. A simple application to generate QR codes. We provide QR Code for FREE and provided as is without the need to sign-in. </p>
+						
+						<p class="small"> QR codes that are created here are completely free of charge for commercial and print usage.</p>
+					</div>
+
+				</div>
+
+				
+{% endblock %}

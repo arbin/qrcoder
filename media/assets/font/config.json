@@ -1,0 +1,261 @@
+{
+  "name": "icon",
+  "glyphs": [
+    {
+      "uid": "40ef3542646bed70cb63f1290c9d98c9",
+      "orig_css": "down-circle2",
+      "orig_code": 59224,
+      "css": "download",
+      "code": 59224,
+      "src": "entypo"
+    },
+    {
+      "uid": "13b11ab72c6ae9c97ee12428e17f3a4e",
+      "orig_css": "dot-2",
+      "orig_code": 59276,
+      "css": "flickr",
+      "code": 59276,
+      "src": "entypo"
+    },
+    {
+      "uid": "2d3ce9463ed5525c6faa01f84c957843",
+      "orig_css": "youtube",
+      "orig_code": 62227,
+      "css": "youtube",
+      "code": 62227,
+      "src": "websymbols"
+    },
+    {
+      "uid": "240979dd9fcf2e46250e66792edb8092",
+      "orig_css": "facebook",
+      "orig_code": 62208,
+      "css": "facebook",
+      "code": 62208,
+      "src": "brandico"
+    },
+    {
+      "uid": "d611dd319d8c13b4551dc5bd85c1bdfd",
+      "orig_css": "twitter",
+      "orig_code": 62210,
+      "css": "twitter",
+      "code": 62210,
+      "src": "brandico"
+    },
+    {
+      "uid": "4c01f5d3ba5fbf029bca8630cce41e6a",
+      "orig_css": "twitter-bird",
+      "orig_code": 62211,
+      "css": "twitter-bird",
+      "code": 62211,
+      "src": "brandico"
+    },
+    {
+      "uid": "70cdf244c51630e09038659d1dcbee87",
+      "orig_css": "vimeo",
+      "orig_code": 62223,
+      "css": "vimeo",
+      "code": 62223,
+      "src": "brandico"
+    },
+    {
+      "uid": "076f25da90f45dd112e006f2cd7ea76b",
+      "orig_css": "tumblr",
+      "orig_code": 62225,
+      "css": "tumblr",
+      "code": 62225,
+      "src": "brandico"
+    },
+    {
+      "uid": "626fb97a7c0c0db53a1853fb9e96e223",
+      "orig_css": "googleplus-rect",
+      "orig_code": 62217,
+      "css": "googleplus-rect",
+      "code": 62217,
+      "src": "brandico"
+    },
+    {
+      "uid": "24d1008bf15b6c02a5e7a6af026987dd",
+      "orig_css": "github-text",
+      "orig_code": 62215,
+      "css": "github-text",
+      "code": 62215,
+      "src": "brandico"
+    },
+    {
+      "uid": "4a0bb1ac004980bb3837560d4c9e8cee",
+      "orig_css": "github",
+      "orig_code": 62216,
+      "css": "github",
+      "code": 62216,
+      "src": "brandico"
+    },
+    {
+      "uid": "5a00c877da3f63d37cdc021815e3f5a9",
+      "orig_css": "skype",
+      "orig_code": 62219,
+      "css": "skype",
+      "code": 62219,
+      "src": "brandico"
+    },
+    {
+      "uid": "01f67de2dc0137389f1c3aced6273acd",
+      "orig_css": "icq",
+      "orig_code": 62212,
+      "css": "icq",
+      "code": 62212,
+      "src": "brandico"
+    },
+    {
+      "uid": "5b16ceef1c8638bd5389c9302ea04098",
+      "orig_css": "vkontakte-rect",
+      "orig_code": 62218,
+      "css": "vkontakte-rect",
+      "code": 62218,
+      "src": "brandico"
+    },
+    {
+      "uid": "229e50061df526f24f1ae884fab52101",
+      "orig_css": "odnoklassniki",
+      "orig_code": 62220,
+      "css": "odnoklassniki",
+      "code": 62220,
+      "src": "brandico"
+    },
+    {
+      "uid": "eeec90e0e80f11e1aff10800200c9a66",
+      "orig_css": "friendfeed",
+      "orig_code": 62226,
+      "css": "friendfeed",
+      "code": 62226,
+      "src": "brandico"
+    },
+    {
+      "uid": "303f1f30-eda7-11e1-aff1-0800200c9a66",
+      "orig_css": "blogger",
+      "orig_code": 62228,
+      "css": "blogger",
+      "code": 62228,
+      "src": "brandico"
+    },
+    {
+      "uid": "d04790a0ec2d11e1aff10800200c9a66",
+      "orig_css": "deviantart",
+      "orig_code": 62230,
+      "css": "deviantart",
+      "code": 62230,
+      "src": "brandico"
+    },
+    {
+      "uid": "466d1430ec2e11e1aff10800200c9a66",
+      "orig_css": "jabber",
+      "orig_code": 62231,
+      "css": "jabber",
+      "code": 62231,
+      "src": "brandico"
+    },
+    {
+      "uid": "9e237480ec2e11e1aff10800200c9a66",
+      "orig_css": "lastfm",
+      "orig_code": 62232,
+      "css": "lastfm",
+      "code": 62232,
+      "src": "brandico"
+    },
+    {
+      "uid": "542e3f055aaa4ddfb9ab3e00397db47f",
+      "orig_css": "linkedin",
+      "orig_code": 62234,
+      "css": "linkedin",
+      "code": 62234,
+      "src": "brandico"
+    },
+    {
+      "uid": "d93230ef6fa54fb9805ba4cc9d9af5b1",
+      "orig_css": "picasa",
+      "orig_code": 62236,
+      "css": "picasa",
+      "code": 62236,
+      "src": "brandico"
+    },
+    {
+      "uid": "1357ba39f8dc4519949cc4da55226b62",
+      "orig_css": "wordpress",
+      "orig_code": 62237,
+      "css": "wordpress",
+      "code": 62237,
+      "src": "brandico"
+    },
+    {
+      "uid": "831e70448a066d4403a0bbd8ff0b8973",
+      "orig_css": "lamp",
+      "orig_code": 8010,
+      "css": "lamp",
+      "code": 8010,
+      "src": "iconic"
+    },
+    {
+      "uid": "667b873c8422e4cab006df8422cb51c5",
+      "orig_css": "pencil",
+      "orig_code": 9998,
+      "css": "pencil",
+      "code": 9998,
+      "src": "iconic"
+    },
+    {
+      "uid": "7e2642b7a42728c7d9ce5558c3f8461b",
+      "orig_css": "chat",
+      "orig_code": 59168,
+      "css": "chat",
+      "code": 59168,
+      "src": "iconic"
+    },
+    {
+      "uid": "fc94b92194752796654c96c7b7dccebb",
+      "orig_css": "cog",
+      "orig_code": 9881,
+      "css": "cog",
+      "code": 9881,
+      "src": "iconic"
+    },
+    {
+      "uid": "9bf421d05c985b569e86fa7c502bd879",
+      "orig_css": "picture",
+      "orig_code": 7984,
+      "css": "picture",
+      "code": 7984,
+      "src": "iconic"
+    },
+    {
+      "uid": "b99d736cef489a3150ba8aac7c4e8403",
+      "orig_css": "clock",
+      "orig_code": 8021,
+      "css": "clock",
+      "code": 8021,
+      "src": "iconic"
+    },
+    {
+      "uid": "7ad4d2306ebda8452e5e3eff3cd8241c",
+      "orig_css": "thumbs-up",
+      "orig_code": 8004,
+      "css": "thumbs-up",
+      "code": 8004,
+      "src": "entypo"
+    },
+    {
+      "uid": "96a3aff31cec6cfbe6177151b3a44d20",
+      "orig_css": "quote-left-alt",
+      "orig_code": 10075,
+      "css": "quote-left-alt",
+      "code": 10075,
+      "src": "iconic"
+    },
+    {
+      "uid": "6d0d103e180c68aa77bd26a595b5aa5f",
+      "orig_css": "quote-right-alt",
+      "orig_code": 10076,
+      "css": "quote-right-alt",
+      "code": 10076,
+      "src": "iconic"
+    }
+  ]
+}
