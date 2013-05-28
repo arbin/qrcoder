@@ -33,6 +33,10 @@ except ImportError:
     PyQRNative = None
 
 QR_DIR = settings.QR_DIR
+QR_FILE_DIR = settings.QR_FILE_DIR
+MERGE_FILE_DIR = settings.MERGE_FILE_DIR
+FILE_UPLOAD_DIR = settings.FILE_UPLOAD_DIR
+PDF_FILE = settings.PDF_FILE
 
 def get_unique_filename():
     unique_filename = uuid.uuid4()
@@ -48,7 +52,6 @@ def count_qr():
     return str(count)
 
 def process_data(data, filename):
-    QR_FILE_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/'
 
     """ QR version 1 """
     qr = qrcode.QRCode(version=1, box_size=10, border=4)
@@ -122,10 +125,10 @@ def home(request):
             elif key == "email":
                 data = "sendmail"
                 name = "sendmail"
-##        print data, name
+
         if data != "sendmail":
             qrcode1, qrcode40, downloadzip = process_data(data, name)
-            #pdf_for_print = print_qr(data)
+            
             return render_to_response('home.html', dict(
                     qroutput1 = qrcode1,
                     qroutput40 = qrcode40,
@@ -145,7 +148,6 @@ def home(request):
                 qrmerge = "qroutput.merge.png"), context_instance=RequestContext(request))
 
     else:
-        #return TemplateResponse(request, 'home.html', None)
         return render_to_response('home.html', dict(
                 qroutput1 = "qrcode.website.url.png",
                 qroutput40 = "qrcode.website.url.40.png",
@@ -155,8 +157,6 @@ def home(request):
                 qrmerge = "qroutput.merge.png"), context_instance=RequestContext(request))
 
 def merge_image(b_image, f_image, position):
-    MERGE_FILE_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/merge/'
-    QR_FILE_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/'
     f_image = os.path.join(QR_FILE_DIR, f_image)
     foreground = Image.open(f_image)
     resized_qrcode = foreground.resize((100, 100), Image.ANTIALIAS)
@@ -181,7 +181,6 @@ def merge_image(b_image, f_image, position):
     return image_filename
 
 def uploads(request):
-    FILE_UPLOAD_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/uploads/'
     b_filename = request.FILES['background'].name
     b_destination = open(FILE_UPLOAD_DIR + b_filename, 'wb+')
     for chunk in request.FILES['background'].chunks():
@@ -228,12 +227,8 @@ def print_qr(data):
     """ This will create PDF with QR images on a 2x2 inch size in an A4 paper. """
     filename = get_unique_filename()
     filename = "qrcoder." + filename + ".pdf"
-    # Create the HttpResponse object with the appropriate PDF headers.
-##    response = HttpResponse(mimetype='application/pdf')
-##    response['Content-Disposition'] = 'attachment; filename=' + filename
-
-##    pdf = canvas.Canvas(response)
-    PDF_FILE = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/pdf/' + filename
+    
+    PDF_FILE = PDF_FILE + filename
     pdf = canvas.Canvas(PDF_FILE)
 
     qr_code = QrCodeWidget(data)
