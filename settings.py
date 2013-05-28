@@ -1,5 +1,4 @@
 # Django settings for qrcoder project.
-# http://blog.ruedaminute.com/2011/01/2011-installation-instructions-for-django-on-bluehost/
 import os
 from os import path
 
@@ -168,5 +167,9 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'arbinbulai@gmail.com'
 EMAIL_HOST_PASSWORD = 'arbinobjerg'
 EMAIL_PORT = 587
-
+# Change paths for your own paths
 QR_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/'
+QR_FILE_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/'
+MERGE_FILE_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/merge/'
+FILE_UPLOAD_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/uploads/'
+PDF_FILE = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/pdf/'
