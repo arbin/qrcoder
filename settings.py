@@ -57,9 +57,9 @@ MEDIA_ROOT = os.path.join(path.dirname(__file__), 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = 'http://localhost:8000/media/'
+MEDIA_URL = '/media/'
 
-ADMIN_MEDIA_PREFIX = 'http://localhost:8000/media/'
+ADMIN_MEDIA_PREFIX = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -76,7 +76,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/templates",
+    os.path.join(os.path.normpath("%s/../" % os.path.dirname(__file__)), 'templates'),
 )
 
 # List of finder classes that know how to find static files in
@@ -104,7 +104,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'qrcoder.urls'
@@ -116,7 +116,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/templates",
+    os.path.join(os.path.normpath("%s/../" % os.path.dirname(__file__)), 'templates'),
 )
 
 INSTALLED_APPS = (
@@ -165,11 +165,12 @@ LOGGING = {
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'arbinbulai@gmail.com'
-EMAIL_HOST_PASSWORD = 'arbinobjerg'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
+
 # Change paths for your own paths
-QR_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/'
-QR_FILE_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/'
-MERGE_FILE_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/merge/'
-FILE_UPLOAD_DIR = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/uploads/'
-PDF_FILE = 'C:/Python27/Django-1.4/django/bin/qrcoder/qrcoder/media/assets/img/qrcode/pdf/'
+QR_DIR = os.path.join(os.path.normpath("%s/../../../../" % os.path.dirname(__file__)), 'media/assets/img/qrcode/')
+QR_FILE_DIR = os.path.join(os.path.normpath("%s/../../../../" % os.path.dirname(__file__)), 'media/assets/img/qrcode/')
+MERGE_FILE_DIR = os.path.join(os.path.normpath("%s/../../../../" % os.path.dirname(__file__)), 'media/assets/img/merge/')
+FILE_UPLOAD_DIR = os.path.join(os.path.normpath("%s/../../../../" % os.path.dirname(__file__)), 'media/assets/img/uploads/')
+PDF_FILE = os.path.join(os.path.normpath("%s/../../../../../" % os.path.dirname(__file__)), 'media/assets/img/qrcode/pdf/')
