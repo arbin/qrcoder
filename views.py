@@ -1,13 +1,9 @@
-# Create your views here.
-from django.template.response import TemplateResponse
 from django.core.mail import EmailMessage
 from django.contrib import messages
-from django.template import Template, Context
-
+from django.conf import settings
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-
-from django.conf import settings
+from django.template.response import TemplateResponse
 
 import Image
 import os
@@ -15,12 +11,9 @@ import uuid
 import zipfile
 
 from reportlab.pdfgen import canvas
-from django.http import HttpResponse
 from reportlab.graphics.shapes import Drawing
 from reportlab.graphics.barcode.qr import QrCodeWidget
 from reportlab.graphics import renderPDF
-
-from cStringIO import StringIO
 
 try:
     import qrcode
@@ -51,8 +44,7 @@ def count_qr():
             count+=1
     return str(count)
 
-def process_data(data, filename):
-
+def process_data(data):
     """ QR version 1 """
     qr = qrcode.QRCode(version=1, box_size=10, border=4)
     qr.add_data(data)
